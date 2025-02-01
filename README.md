@@ -48,4 +48,6 @@ To convert it to decimal, first we switch these two bytes to `00 A7`, then we co
 
 The last row you will find the hex value `F5 01`. To convert it into a decimal value, we first switch these two bytes to `01 F5`, then we convert it to decimal (01F5 = 501).
 
+This "inversion" is necessary due to the format the bytes are stored in memory (Little Endian).
+
 It is important to convert to decimal for using with the `.fdt` file.
