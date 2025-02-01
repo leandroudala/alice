@@ -1,0 +1,94 @@
+101:choice:choice:multi:repeat:notype::'Tipo Coleção'/
+ >:'Livro'/
+ >:'Folheto'/
+ >:'Documentação virtual'/
+ >:'Documentação diversa'/
+ >:'Documentação escrita'/
+ >:'Periódico'/
+ >:'Hemero'/
+ >:'Coleções especiais'/
+ >:'CD-rom'/
+ >:'Tese'
+
+102:choice:choice:notype::'Nível Tratamento'/
+ >:'na'/
+ >:'ap'/
+ >:'m'/
+ >:'pt'
+
+121:choice:choice::'ISBN/ISSN'/'ISBN '/'ISSN '
+
+131:choice:choice:notype::'Forma Documento'/
+ >:'Álbum'/
+ >:'Álbum de figurinhas'/
+ >:'Almanaque'/
+ >:'Anuário'/
+ >:'Anúncio publicitário'/
+ >:'Argumento'/
+ >:'Bibliografia'/
+ >:'Biografia'/
+ >:'Blog'/
+ >:'Calendário'/
+ >:'Catálogo'/
+ >:'Catálogo de evento'/
+ >:'Chapa de impressão'/
+ >:'Citação'/
+ >:'Coletânea'/
+ >:'Correspondência'/
+ >:'Crítica'/'Cronologia'/
+ >:'Depoimento'/
+ >:'Descrição plano a plano'/
+ >:'Diafilme'/
+ >:'Diário'/
+ >:'Dicionário'/
+ >:'Diretório'/
+ >:'Disco'/
+ >:'Dramaturgia'/
+ >:'Ebook'/
+ >:'Email'/
+ >:'Enciclopédia'/
+ >:'Entrevista'/
+ >:'Escritos'/
+ >:'Estatística'/
+ >:'Ficha técnica'/
+ >:'Filmografia'/
+ >:'Folha de continuidade'/
+ >:'Foto do filme'/
+ >:'Foto do evento'/
+ >:'Glossário'/
+ >:'Gravação sonora'/
+ >:'Guia'/
+ >:'História'/
+ >:'História em quadrinhos'/
+ >:'Índice'/
+ >:'Intertítulo'/
+ >:'Lista de diálogo'/
+ >:'Literatura'/
+ >:'Manual'/
+ >:'Material publicitário'/
+ >:'Memorabilia'/
+ >:'Normas'/
+ >:'Nota de divulgação'/
+ >:'Obtuário'/
+ >:'Organograma'/
+ >:'Partitura'/
+ >:'Programa'/
+ >:'Programa de cinemas'/
+ >:'Rede social'/
+ >:'Relatório'/
+ >:'Reportagem'/
+ >:'Resenha'/
+ >:'Roteiro'/
+ >:'Sinopse'/
+ >:'Slide'/
+ >:'Tabela'/
+ >:'Videografia'
+
+129:choice:choice:notype::'Área temática'/
+ >:'Cinema'/
+ >:'Televisão'/
+ >:'Vídeo'/
+ >:'Fotografia'/
+ >:'Rádio'/
+ >:'Literatura complementar'
+

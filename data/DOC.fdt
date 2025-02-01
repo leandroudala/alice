@@ -1,0 +1,35 @@
+W:DOC   
+F:DOC   
+S:DOC   
+***
+[167] Bases de dados                              167 1000 0 1
+[100] No. Chamada                                 100 1000 0 1
+[101] Tipo Cole‡Æo                                101 1000 0 1
+[102] N¡vel Tratamento                            102 1000 0 0
+[105] Autor Pessoal (monog)                       105 1000 0 1
+[106] Autor Pessoal (analit)                      106 1000 0 1
+[107] Autor Entidade (monog)                      107 1000 0 1
+[108] Autor Entidade (analit)                     108 1000 0 1
+[109] Acrescimos Autor        xz                  109 1000 0 1
+[110] Men‡Æo Responsabilidade nez                 110 1000 0 0
+[115] T¡tulo                  abmsp               115 1000 0 0
+[116] Outros T¡tulos                              116 1000 0 1
+[117] Edi‡Æo                                      117 1000 0 0
+[118] Cola‡Æo                 abcfmvnpr           118 1000 0 0
+[119] Imprenta                ledtopq             119 1000 0 0
+[120] Cole‡Æo/S‚rie           cnsv                120 1000 0 0
+[121] ISBN/ISSN                                   121 1000 0 0
+[125] Notas                                       125 1000 0 1
+[122] Cole‡Æo periodico                           122 1000 0 1
+[126] Pista Responsabilidades                     126 1000 0 1
+[131] Forma document                              131 1000 0 1
+[127] Descritores Primarios                       127 1000 0 1
+[128] Descritores Secund rios                     128 1000 0 1
+[129] Area tematica                               129 1000 0 1
+[130] Termo Geografico                            130 1000 0 1
+[132] Temporalidade                               132 1000 0 0
+[135] Dados Aquisi‡Æo         fdcpbzet            135 1000 0 1
+[136] Nos. Tombo                                  136 1000 0 1
+[166] C¢d. Imagem Virtual                         166 1000 0 0
+[500] Alimentador             ac                  500 1000 0 1
+[501] Revisor                 ac                  501 1000 0 1

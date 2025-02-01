@@ -1,0 +1,32 @@
+f2,cl4,m(3937,-3937)
+(if p(v167) then '[167] Bases de dados (167):',tab(3937),v167/fi)
+(if p(v100) then '[100] No. Chamada (100):',tab(3937),v100/fi)
+(if p(v101) then '[101] Tipo Cole‡Æo (101):',tab(3937),v101/fi)
+"[102] N¡vel Tratamento (102):",tab(3937),v102/
+(if p(v105) then '[105] Autor Pessoal (monog) (105):',tab(3937),v105/fi)
+(if p(v106) then '[106] Autor Pessoal (analit) (106):',tab(3937),v106/fi)
+(if p(v107) then '[107] Autor Entidade (monog) (107):',tab(3937),v107/fi)
+(if p(v108) then '[108] Autor Entidade (analit) (108):',tab(3937),v108/fi)
+(if p(v109) then '[109] Acrescimos Autor (109):',tab(3937),v109/fi)
+"[110] Men‡Æo Responsabilidade (110):",tab(3937),v110/
+"[115] T¡tulo (115):",tab(3937),v115/
+(if p(v116) then '[116] Outros T¡tulos (116):',tab(3937),v116/fi)
+"[117] Edi‡Æo (117):",tab(3937),v117/
+"[118] Cola‡Æo (118):",tab(3937),v118/
+"[119] Imprenta (119):",tab(3937),v119/
+"[120] Cole‡Æo/S‚rie (120):",tab(3937),v120/
+"[121] ISBN/ISSN (121):",tab(3937),v121/
+(if p(v125) then '[125] Notas (125):',tab(3937),v125/fi)
+(if p(v122) then '[122] Cole‡Æo periodico (122):',tab(3937),v122/fi)
+(if p(v126) then '[126] Pista Responsabilidades (126):',tab(3937),v126/fi)
+(if p(v131) then '[131] Forma document (131):',tab(3937),v131/fi)
+(if p(v127) then '[127] Descritores Primarios (127):',tab(3937),v127/fi)
+(if p(v128) then '[128] Descritores Secund rios (128):',tab(3937),v128/fi)
+(if p(v129) then '[129] Area tematica (129):',tab(3937),v129/fi)
+(if p(v130) then '[130] Termo Geografico (130):',tab(3937),v130/fi)
+"[132] Temporalidade (132):",tab(3937),v132/
+(if p(v135) then '[135] Dados Aquisi‡Æo (135):',tab(3937),v135/fi)
+(if p(v136) then '[136] Nos. Tombo (136):',tab(3937),v136/fi)
+"[166] C¢d. Imagem Virtual (166):",tab(3937),v166/
+(if p(v500) then '[500] Alimentador (500):',tab(3937),v500/fi)
+(if p(v501) then '[501] Revisor (501):',tab(3937),v501/fi)
