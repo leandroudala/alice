@@ -1,11 +1,17 @@
+from io import BufferedReader
 import struct
 
 from core.domain.pointers import CrossReference, Pointer
 
 
-class XrfExtractor:
+class XRFExtractor:
     BLOCK_SIZE = 512
     pointers = []
+    block: bytes
+
+    def __init__(self, filename: str):
+        with open(filename, mode="rb") as file:
+            self.block = file.read(self.BLOCK_SIZE)
 
     def is_logically_deleted(self, xr_fmb: int, xr_fmp: int) -> bool:
         return xr_fmb < 0 and xr_fmp > 0
@@ -23,7 +29,7 @@ class XrfExtractor:
         return self.is_logically_deleted(xr_fmb, xr_fmp) or self.is_physically_deleted(
             xr_fmb, xr_fmp
         )
-    
+
     def __check_block_size(self, block: bytes):
         """Check if the block size is exactly 512 bytes"""
         if len(block) != self.BLOCK_SIZE:
@@ -41,8 +47,6 @@ class XrfExtractor:
         where:
         - XRFMFB (21 bits) is the Master file block number.
         - XRFMFP (11 bits) is the offset within that block.
-
-        
         """
 
         self.__check_block_size(block)
@@ -88,11 +92,12 @@ class XrfExtractor:
 
     def __to_pointer(self, raw) -> Pointer:
         record_id = raw["MFN"]
+        block_number = raw['XRFMFB']
         offset = raw["XRFMFP"] - 1024
-        return Pointer(record_id, offset)
+        return Pointer(record_id, block_number, offset)
 
-    def to_cross_reference(self, block: bytes):
-        data = self.__extract_data(block)
+    def to_cross_reference(self):
+        data = self.__extract_data(self.block)
 
         block_number = data["block_number"]
         last_block = data["last_block"]
