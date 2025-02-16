@@ -6,7 +6,7 @@ from core.domain.table_definition import ColumnDefinition
 from core.domain.master_file import Record
 
 database = "THES"
-extension_upper = True
+extension_upper = True  # linux is case sensitive
 
 
 def get_file(extension: str) -> str:
@@ -52,4 +52,4 @@ for reference in cross_references:
         total_records.append(processed)
 
 
-print('Database: %s, records: %d' % (database, len(total_records)))
+print("Database: %s, records: %d" % (database, len(total_records)))
