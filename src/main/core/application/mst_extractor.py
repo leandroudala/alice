@@ -52,7 +52,7 @@ class MSTExtractor:
 
         return self.__read_file(absolute_offset)
 
-    def __calculate_fields(self, fields: int) -> int:
+    def __calculate_fields_bytes(self, fields: int) -> int:
         return fields * 6
 
     def __process_fields(self, quantity_fields: int, raw: bytes) -> list[Field]:
@@ -74,15 +74,16 @@ class MSTExtractor:
 
             # Read the first 4 bytes to get the record length.
             record_id = next_int(f)
-            record_length = next_short(f)
-            skip(f, 8)
+            # skipping 10 unnecessary bytes
+            skip(f, 10)
             number_of_fields = next_short(f)
+
+            # skipping 2 uncessary bytes (status)
             skip(f, 2)
-            fields_size = self.__calculate_fields(number_of_fields)
+            fields_size = self.__calculate_fields_bytes(number_of_fields)
             fields_raw = next_chunk(f, fields_size)
             fields = self.__process_fields(number_of_fields, fields_raw)
             chunk_size = sum(f.length for f in fields)
-            print(chunk_size, record_length)
 
             chunk = next_chunk(f, chunk_size)
             return Record(record_id, fields, chunk)
