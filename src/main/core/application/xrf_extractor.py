@@ -4,13 +4,17 @@ from core.domain.cross_reference import CrossReference, Pointer
 
 
 class XRFExtractor:
+    filename: str
     BLOCK_SIZE = 512
     pointers = []
-    block: bytes
 
     def __init__(self, filename: str):
-        with open(filename, mode="rb") as file:
-            self.block = file.read(self.BLOCK_SIZE)
+        self.filename = filename
+
+    def __read_block(self, offset: int = 0) -> bytes:
+        with open(self.filename, mode="rb") as file:
+            file.seek(offset * self.BLOCK_SIZE)
+            return file.read(self.BLOCK_SIZE)
 
     def is_logically_deleted(self, xr_fmb: int, xr_fmp: int) -> bool:
         return xr_fmb < 0 and xr_fmp > 0
@@ -92,14 +96,28 @@ class XRFExtractor:
     def __to_pointer(self, raw) -> Pointer:
         record_id = raw["MFN"]
         block_number = raw["XRFMFB"]
-        offset = raw["XRFMFP"] - 1024
+        offset = raw["XRFMFP"]
+        if offset > self.BLOCK_SIZE:
+            offset -= 1024
+
         return Pointer(record_id, block_number, offset)
 
-    def to_cross_reference(self):
-        data = self.__extract_data(self.block)
+    def to_cross_reference(self) -> list[CrossReference]:
+        continue_reading = True
+        references: list[CrossReference] = []
 
-        block_number = data["block_number"]
-        last_block = data["last_block"]
-        pointers = tuple(map(self.__to_pointer, data["pointers"]))
+        block_id = 0
+        while continue_reading:
+            block = self.__read_block(block_id)
+            data = self.__extract_data(block)
 
-        return CrossReference(block_number, last_block, pointers)
+            block_number = data["block_number"]
+            last_block = data["last_block"]
+            pointers = tuple(map(self.__to_pointer, data["pointers"]))
+
+            reference = CrossReference(block_number, last_block, pointers)
+            references.append(reference)
+            continue_reading = not last_block
+            block_id += 1
+
+        return references
