@@ -1,12 +1,12 @@
 import os
 import sys
 
-from core.usecase.fdt_extractor import FDTExtractor
-from core.usecase.mst_extractor import MSTExtractor
-from core.usecase.xrf_extractor import XRFExtractor
-from core.domain.cross_reference import CrossReference
-from core.domain.master_file import Record
-from core.domain.table_definition import ColumnDefinition
+from core.usecases.fdt_extractor import FDTExtractor
+from core.usecases.mst_extractor import MSTExtractor
+from core.usecases.xrf_extractor import XRFExtractor
+from core.entities.cross_reference import CrossReference
+from core.entities.master_file import Record
+from core.entities.table_definition import ColumnDefinition
 
 database = "CDS"
 extension_upper = True  # linux is case sensitive

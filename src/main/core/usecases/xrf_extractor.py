@@ -1,6 +1,6 @@
 import struct
 
-from core.domain.cross_reference import CrossReference, Pointer
+from core.entities.cross_reference import CrossReference, Pointer
 
 
 class XRFExtractor:

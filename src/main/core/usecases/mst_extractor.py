@@ -1,7 +1,7 @@
 from io import BufferedReader
 
-from core.domain.cross_reference import Pointer
-from core.domain.master_file import Field, Record
+from core.entities.cross_reference import Pointer
+from core.entities.master_file import Field, Record
 
 BLOCK_SIZE = 512
 
