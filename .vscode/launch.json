@@ -8,7 +8,7 @@
             "name": "Main Debug",
             "type": "debugpy",
             "request": "launch",
-            "program": "src/main/main.py",
+            "program": "src/main/alice_application.py",
             "console": "integratedTerminal"
         }
     ]

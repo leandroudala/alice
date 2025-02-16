@@ -1,2 +1,2 @@
 #!/bin/bash
-python src/main/main.py
+python src/main/alice_application.py
