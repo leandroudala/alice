@@ -1,7 +1,6 @@
-from io import BufferedReader
 import struct
 
-from core.domain.pointers import CrossReference, Pointer
+from core.domain.cross_reference import CrossReference, Pointer
 
 
 class XRFExtractor:
@@ -92,7 +91,7 @@ class XRFExtractor:
 
     def __to_pointer(self, raw) -> Pointer:
         record_id = raw["MFN"]
-        block_number = raw['XRFMFB']
+        block_number = raw["XRFMFB"]
         offset = raw["XRFMFP"] - 1024
         return Pointer(record_id, block_number, offset)
 

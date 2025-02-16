@@ -1,10 +1,7 @@
-from functools import reduce
-import struct
 from io import BufferedReader
 
+from core.domain.cross_reference import Pointer
 from core.domain.master_file import Field, Record
-from core.domain.pointers import Pointer
-
 
 BLOCK_SIZE = 512
 
