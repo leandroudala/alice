@@ -1,4 +1,4 @@
-from core.entities.table_definition import column_type_to_enum, ColumnDefinition
+from domain.entities.table_definition import column_type_to_enum, ColumnDefinition
 
 
 class FDTExtractor:
