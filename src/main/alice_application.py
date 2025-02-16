@@ -1,9 +1,9 @@
 import os
 import sys
 
-from core.application.fdt_extractor import FDTExtractor
-from core.application.mst_extractor import MSTExtractor
-from core.application.xrf_extractor import XRFExtractor
+from core.usecase.fdt_extractor import FDTExtractor
+from core.usecase.mst_extractor import MSTExtractor
+from core.usecase.xrf_extractor import XRFExtractor
 from core.domain.cross_reference import CrossReference
 from core.domain.master_file import Record
 from core.domain.table_definition import ColumnDefinition
